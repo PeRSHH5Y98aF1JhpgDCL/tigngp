@@ -15,7 +15,7 @@ let config = {
       
 	  
 	  HyperExpoCSI: D(1.1),
-      desc: 'Slowdown effect is multiplied by 1/(1.09^level), and adds a free tickspeed upgrade, uncapped',
+      desc: 'Slowdown effect is multiplied by 1/(1.09^level), and adds three free tickspeed upgrades, uncapped',
       levelCap: D(1e308),
       onBuy: ["resetDimCache", "slowdown"],
     },
