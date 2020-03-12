@@ -1,17 +1,17 @@
 setTimeout(()=>{
   (()=>{
-function newGame() {
+window.newGame=function() {
   clearAll()
   window.game = new Game()
   setupUpgrades()
   game.prestige[jea([0])] = new Layer();
 }
 
-function nyanSave() {
+window.nyanSave=function() {
   localStorage.setItem('tigsave', getFinalSaveString())
 }
 
-function nyanLoad(save, imp=false) {
+window.nyanLoad=function(save, imp=false) {
   save = (save || localStorage.getItem("tigsave"))
   if (typeof save == "string") {
     try {
@@ -56,16 +56,16 @@ function nyanLoad(save, imp=false) {
   return false
 }
 
-function getFinalSaveString() {
+window.getFinalSaveString=function() {
   return btoa(getSaveString())
 }
 
-function getSaveString() {
+window.getSaveString=function() {
   let save = getMinimalGameObj()
   return JSON.stringify(save)
 }
 
-function getMinimalGameObj() {
+window.getMinimalGameObj=function() {
   let ret = {
     lastUpdate: game.lastUpdate,
     notation: game.notation,
@@ -78,7 +78,7 @@ function getMinimalGameObj() {
   return ret
 }
 
-function wipe() {
+window.wipe=function() {
   newGame();
   nyanSave();
 }}).call(window)
