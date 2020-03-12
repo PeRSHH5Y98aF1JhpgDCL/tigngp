@@ -39,7 +39,7 @@ let config = {
 	  	baseCost:D(1e15),
 		costScale:D(1e15),
 		CSI:D(1e10),
-		HyperExpoCSI:D(1.01),
+		HyperExpoCSI:D(1.1),
 		name:"Dimensional Sale",
 		desc:'Dimension costs are reduced by ^0.9, uncapped.',
 		levelCap:D(1e308)
