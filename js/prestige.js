@@ -352,7 +352,17 @@ window.Dimension=class Dimension extends hasCache {
   }
   
   get cost() {
-    return this.callCache("cost", function() {
+	let temp=this.realcost
+	if(temp.gte(1e50)){
+	let timp=temp
+	timp=timp.div(1e50)
+	timp=timp.log10().add(1)
+	temp=temp.div(timp.pow(timp.pow(0.3333333333333)))//get sniped
+	}
+	return temp
+  }
+	get realcost() {
+		    return this.callCache("cost", function() {
       let ret = this.baseCost.times(D.pow(this.initCostScale,this.bought)) // Basic cost
       if (this.bought.gt(0)) ret.timesBy(D.pow(this.costScaleIncrease, D.sumArithmeticSeries(this.bought, D(1), D(1), D(0))))
 	    let temp
@@ -362,7 +372,7 @@ window.Dimension=class Dimension extends hasCache {
       ret=ret.pow(D(0.8).pow(temp))
       return ret
     })
-  }
+	}
   
   get afford() {
     return game.prestige[this.str_loc].points.gte(this.cost);
