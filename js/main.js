@@ -7,7 +7,7 @@ var breakPoint = false
 function updateDisplay() {
   updateElements()
   for (let i in game.upgrades) game.upgrades[i].domUpdate();
-  if (!('[{"array":[[0,0]],"layer":0,"sign":1}]' in game.prestage)) game.prestige['[{"array":[[0,0]],"layer":0,"sign":1}]']=new Layer()
+  if (!('[{"array":[[0,0]],"layer":0,"sign":1}]' in game.prestige)) game.prestige['[{"array":[[0,0]],"layer":0,"sign":1}]']=new Layer()
 }
 
 function gameLoop(diff) {
