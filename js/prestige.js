@@ -1,4 +1,5 @@
 class Layer {
+	
   constructor(loc, points, power, dims, tslp) {
     this.loc = ea(loc || [0]); // Location of the parent layer
     this.str_loc = j(this.loc);
