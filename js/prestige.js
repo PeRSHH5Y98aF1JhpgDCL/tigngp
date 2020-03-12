@@ -1,5 +1,5 @@
 window.addEventListener('load', (event) => {
-class Layer {
+window.Layer=class {
 	
   constructor(loc, points, power, dims, tslp) {
     this.loc = ea(loc || [0]); // Location of the parent layer
@@ -125,7 +125,7 @@ class Layer {
   }
 }
 
-class Game {
+window.Game=class {
 	
   constructor(data) {
     this.lastUpdate = data ? (data.lastUpdate || new Date().getTime() ) : new Date().getTime()
@@ -177,7 +177,7 @@ class Game {
 
 
 
-class Dimension extends hasCache {
+window.Dimension=class Dimension extends hasCache {
   constructor(loc, dim, amount, bought) {
     super()
     this.dim = D(dim || 0);
