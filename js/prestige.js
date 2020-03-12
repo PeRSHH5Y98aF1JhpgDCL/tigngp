@@ -121,6 +121,7 @@ class Layer {
     for (let i = this.dims.length-1; i > 0; i--) this.dims[i].buyMax();
   }
 }
+
 class Game {
   constructor(data) {
     this.lastUpdate = data ? (data.lastUpdate || new Date().getTime() ) : new Date().getTime()
