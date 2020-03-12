@@ -1,5 +1,4 @@
-// Nyan's Stuff
-onPresLoad=()=>{}
+setTimeout(()=>{
 function newGame() {
   clearAll()
   game = new Game()
@@ -82,4 +81,4 @@ function wipe() {
   newGame();
   nyanSave();
 }
-setInterval(nyanSave,10000)
+setInterval(nyanSave,10000)},10)
