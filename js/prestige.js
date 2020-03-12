@@ -124,6 +124,7 @@ class Layer {
 }
 
 class Game {
+	
   constructor(data) {
     this.lastUpdate = data ? (data.lastUpdate || new Date().getTime() ) : new Date().getTime()
     this.sbe = false;
