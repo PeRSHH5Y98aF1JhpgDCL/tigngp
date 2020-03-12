@@ -338,7 +338,7 @@
     return t;
   };
   P.addBy=function (x) {
-    let y=P.add(x)
+    let y=this.add(x)
     this.array=y.array
     this.sign=y.sign
     this.layer=y.layer
