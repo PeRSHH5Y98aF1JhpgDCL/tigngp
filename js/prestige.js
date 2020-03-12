@@ -335,12 +335,12 @@ window.Dimension=class Dimension extends hasCache {
 	if (!!game.upgrades.tickspeed) {
 		teeemp=game.upgrades.tickspeed.level
 	} else {teeemp=D(0)}
-      temp=temp.mul(D(1.1).pow(teeemp))
+      temp=temp.mul(D(1.06).pow(teeemp))
             let teeeemp
       	if (!!game.upgrades.dimColl) {
 		teeeemp=game.upgrades.dimColl.level.mul(3)
 	} else {teeeemp=D(0)}
-	temp=temp.mul(D(1.1).pow(teeemp))
+	temp=temp.mul(D(1.06).pow(teeemp))
       if (temp.gt(1)&&teemp.gte(1)){
       	temp=temp.pow(D(1.2).pow(teemp))
       }
