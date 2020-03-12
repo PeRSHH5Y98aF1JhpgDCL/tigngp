@@ -1,51 +1,3 @@
-class Game {
-  constructor(data) {
-    this.lastUpdate = data ? (data.lastUpdate || new Date().getTime() ) : new Date().getTime()
-    this.sbe = false;
-    this.tab = 0;
-    
-    this.prestige = {jea([0]):new Layer()};
-    this.upgradesBought = [];
-    for (let i in config.upgrades) this.upgradesBought[i] = D(0);
-    
-    this.upgrades = {};
-    
-    this.notation = data ? (data.notation || 'sci') : 'sci';
-    
-    if (data && data.prestige) for (let i in data.prestige) {
-      this.prestige[i] = l(data.prestige[i]);
-    }
-    
-    this.names = [
-      '',
-      'infinity', 
-      'eternity', 
-      'reality', 
-      'equality', 
-      'affinity', 
-      'celerity',
-      'identity', 
-      'vitality', 
-      'immunity', 
-      'atrocity', 
-      'immensity', 
-      'severity', 
-      'fatality', 
-      'insanity', 
-      'calamity', 
-      'futility', 
-      'finality', 
-      'unity'
-    ]
-  }
-  
-  maxAllLayers() {
-    for (let layer in this.prestige) {
-      this.prestige[layer].maxAll()
-    }
-  }
-}
-
 class Layer {
   constructor(loc, points, power, dims, tslp) {
     this.loc = ea(loc || [0]); // Location of the parent layer
@@ -169,6 +121,55 @@ class Layer {
     for (let i = this.dims.length-1; i > 0; i--) this.dims[i].buyMax();
   }
 }
+class Game {
+  constructor(data) {
+    this.lastUpdate = data ? (data.lastUpdate || new Date().getTime() ) : new Date().getTime()
+    this.sbe = false;
+    this.tab = 0;
+    
+    this.prestige = {jea([0]):new Layer()};
+    this.upgradesBought = [];
+    for (let i in config.upgrades) this.upgradesBought[i] = D(0);
+    
+    this.upgrades = {};
+    
+    this.notation = data ? (data.notation || 'sci') : 'sci';
+    
+    if (data && data.prestige) for (let i in data.prestige) {
+      this.prestige[i] = l(data.prestige[i]);
+    }
+    
+    this.names = [
+      '',
+      'infinity', 
+      'eternity', 
+      'reality', 
+      'equality', 
+      'affinity', 
+      'celerity',
+      'identity', 
+      'vitality', 
+      'immunity', 
+      'atrocity', 
+      'immensity', 
+      'severity', 
+      'fatality', 
+      'insanity', 
+      'calamity', 
+      'futility', 
+      'finality', 
+      'unity'
+    ]
+  }
+  
+  maxAllLayers() {
+    for (let layer in this.prestige) {
+      this.prestige[layer].maxAll()
+    }
+  }
+}
+
+
 
 class Dimension extends hasCache {
   constructor(loc, dim, amount, bought) {
