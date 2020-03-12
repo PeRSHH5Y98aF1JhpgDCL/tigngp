@@ -12,10 +12,10 @@ let config = {
     dimStab: {
       name: 'Dimension Stabilizer',
       baseCost: D(1e10),
-      costScale: D(1e5),
-	  CSI: D(1e5),
+      
+	  
 	  HyperExpoCSI: D(1.1),
-      desc: 'Slowdown effect is multiplied by 1/(1.09^level), uncapped',
+      desc: 'Slowdown effect is multiplied by 1/(1.09^level), and adds a free tickspeed upgrade, uncapped',
       levelCap: D(1e308),
       onBuy: ["resetDimCache", "slowdown"],
     },
