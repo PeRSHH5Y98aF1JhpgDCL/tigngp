@@ -376,6 +376,12 @@
     p=q=null;
     return t;
   };
+  P.subBy=function (x) {
+    let y=this.sub(x)
+    this.array=y.array
+    this.sign=y.sign
+    this.layer=y.layer
+  }
   Q.minus=Q.sub=function (x,y){
     return new ExpantaNum(x).sub(y);
   };
