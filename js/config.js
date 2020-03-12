@@ -16,7 +16,7 @@ let config = {
       costScale: D(1e5),
 	  CSI: D(1e5),
 	  HyperExpoCSI: D(1.1),
-      desc: 'Slowdown effect is multiplied by 1/(1.91^level), uncapped',
+      desc: 'Slowdown effect is multiplied by 1/(1.09^level), uncapped',
       levelCap: D(1e308),
       onBuy: ["resetDimCache", "slowdown"],
     },
