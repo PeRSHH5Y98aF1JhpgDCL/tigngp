@@ -6,7 +6,7 @@ let config = {
       costScale: D(1e15),
       CSI: D(1e5),
 	  HyperExpoCSI: D(1.2),
-      desc: 'Mult per dims is increased by log2(level+1)/1.5 and then raised to the power of log3(level/2)+1, but dim cost scale is raised to the power of log2(level/2)+1, and your dimensions are reset, uncapped.', // Sorry Aarex
+      desc: 'haha no it breaks the game', // Sorry Aarex
       levelCap: D(1e308),
       onBuy: ["resetLayer", jea([0])],
     },
@@ -29,6 +29,14 @@ let config = {
       desc: 'Dimension powers are raised to the power of 1.2 but only if greater than 1 for each upgrade, also wipes other upgrades, uncapped.',
       levelCap: D(1e308),
       onBuy: [()=>{game.upgrades.dimComp.level.array=[[0,0]];game.upgrades.dimStab.level.array=[[0,0]];},"resetLayer",jea([0])]
-    }
+    },
+	  tickspeed:{
+	  	baseCost:D(1e3),
+		costScale:D(1e1),
+		HyperExpoCSI:D(1.01),
+		name:"Tickspeed",
+		desc:'Multiplies Dimensions by 1.1',
+		levelCap:D(1e308)
+	  }
   }
 }
