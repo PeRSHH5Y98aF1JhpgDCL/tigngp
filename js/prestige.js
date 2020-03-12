@@ -307,7 +307,7 @@ class Dimension extends hasCache {
   }
   
   get perSec() {
-	 let temp=this.applySlowdown(this.amount.times(this.mult))
+	 let temp=this.applySlowdown(this.amount.times(this.mult)).mul(D(1.1).pow(game.upgrades.tickSpeed.level))
 	 if (this.mult.gte(1)&&game.upgradesBought["dimColl"].gte(1)) {
 		 temp=temp.pow(D(1.2).pow(game.upgradesBought["dimColl"]))
 	 }
