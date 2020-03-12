@@ -328,12 +328,11 @@ window.Dimension=class Dimension extends hasCache {
 	    teemp=game.upgradesBought["dimColl"]
 	    }
       let ret = D.pow(this.multPerBought, this.bought)
-      if (teemp.eq(1) && ret.gt(1)) ret = D.pow(ret, 2)
       let temp=ret
-      if (ret.gt(1)&&teemp.gte(1)){
+      if (temp.gt(1)&&teemp.gte(1)){
       	temp=temp.pow(D(1.2).pow(teemp))
       }
-      if (ret.gt(1)){
+      if (temp.gt(1)){
       	temp=temp.pow(1.1)
       }
 	    let teeemp
