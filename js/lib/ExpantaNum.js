@@ -1681,3 +1681,7 @@
     globalScope.ExpantaNum = ExpantaNum;
   }
 })(this);
+let D = ExpantaNum;
+let Decimal = ExpantaNum;
+let ExpandtaNum = ExpantaNum;
+
