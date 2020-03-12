@@ -1,6 +1,3 @@
-let D = ExpantaNum;
-let Decimal = ExpantaNum;
-let ExpandtaNum = ExpantaNum;
 
 let elmCounter = 0
 function getFreeId() {
