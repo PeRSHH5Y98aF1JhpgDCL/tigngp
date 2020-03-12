@@ -1,3 +1,4 @@
+setTimeout(()=>{
 class Layer {
 	
   constructor(loc, points, power, dims, tslp) {
@@ -382,7 +383,7 @@ class Dimension extends hasCache {
     return [this.amount.toString(), this.bought.toString(), this.dim.toString()]
   }
 }
-
+},1000)
 // Empty line inserted to make mobile coding easier
 
 
