@@ -347,10 +347,6 @@ window.Dimension=class Dimension extends hasCache {
       	temp=temp.pow(1.1)
       }
 
-	          let teeeemp
-      	if (!!game.upgrades.dimColl) {
-		teeeemp=game.upgrades.dimColl.level
-	} else {teeeemp=D(0)}
       return temp
     })
   }
