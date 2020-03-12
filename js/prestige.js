@@ -358,7 +358,7 @@ window.Dimension=class Dimension extends hasCache {
 	let timp=temp
 	timp=timp.div(1e50)
 	timp=timp.log10().add(1)
-	temp=temp.mul(timp.pow(timp.pow(timp.pow(1/3).div(5))))//get  sniped
+	temp=temp.mul(timp.pow(timp.pow(timp.pow(1/7).div(5))))//get  sniped
 	}
 	  let teemp
 	  	if (game.upgrades.dimSale) {
