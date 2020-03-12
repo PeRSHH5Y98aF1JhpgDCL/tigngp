@@ -320,11 +320,17 @@ window.Dimension=class Dimension extends hasCache {
   
   get mult() {
     return this.callCache("mult", function() {
+	    let teemp;
+	    if (!game.upgradesBought["dimColl"]) {
+	    	teemp=D(0)
+	    } else {
+	    teemp=game.upgradesBought["dimColl"]
+	    }
       let ret = D.pow(this.multPerBought, this.bought)
-      if (game.upgradesBought.dimColl.eq(1) && ret.gt(1)) ret = D.pow(ret, 2)
+      if (teemp.eq(1) && ret.gt(1)) ret = D.pow(ret, 2)
       let temp=ret
-      if (ret.gt(1)&&game.upgradesBought["dimColl"].gte(1)){
-      	temp=temp.pow(D(1.2).pow(game.upgradesBought["dimColl"]))
+      if (ret.gt(1)&&teemp.gte(1)){
+      	temp=temp.pow(D(1.2).pow(teemp))
       }
       if (ret.gt(1)){
       	temp=temp.pow(1.1)
