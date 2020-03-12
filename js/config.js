@@ -32,7 +32,7 @@ let config = {
 		costScale:D(1e1),
 		HyperExpoCSI:D(1.01),
 		name:"Tickspeed",
-		desc:'Multiplies Dimensions by 1.1, uncapped.(affects after dimColl)',
+		desc:'Multiplies Dimensions by 1.1, uncapped.',
 		levelCap:D(1e308)
 	  },
 	  dimSale:{
