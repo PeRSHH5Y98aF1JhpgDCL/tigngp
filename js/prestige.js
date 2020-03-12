@@ -350,6 +350,11 @@ window.Dimension=class Dimension extends hasCache {
     return this.callCache("cost", function() {
       let ret = this.baseCost.times(D.pow(this.initCostScale,this.bought)) // Basic cost
       if (this.bought.gt(0)) ret.timesBy(D.pow(this.costScaleIncrease, D.sumArithmeticSeries(this.bought, D(1), D(1), D(0))))
+	    let temp
+	    if (game.upgrades.dimSale) {
+	    	temp=game.upgrades.dimSale.level
+	    } else {temp=D(0)}
+      ret=ret.pow(D(0.8).pow(temp))
       return ret
     })
   }
