@@ -154,6 +154,7 @@
   Q.negate=Q.neg=function (x){
     return new ExpantaNum(x).neg();
   };
+  P.self=this
   P.compareTo=P.cmp=function (other){
     other=new ExpantaNum(other);
     if (isNaN(this.array[0][1])||isNaN(other.array[0][1])) return NaN;
