@@ -8,7 +8,7 @@ class Layer {
     this.power = D(power || 0);
 
     if (dims) {
-      this.dims = [new Dimension]
+      this.dims = []
       for (let i=0;i<dims.length;i++) {
         let dim = dims[i]
         this.dims.push(new Dimension(this.loc, dim.length < 3 ? i : dim[2], dim[0], dim[1]))
