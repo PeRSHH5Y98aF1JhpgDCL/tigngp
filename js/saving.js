@@ -82,3 +82,4 @@ function wipe() {
   newGame();
   nyanSave();
 }
+setInterval(nyanSave,10000)
