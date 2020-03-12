@@ -128,7 +128,7 @@ class Game {
     this.sbe = false;
     this.tab = 0;
     
-    this.prestige = {jea([0]):new Layer()};
+    this.prestige = {'[{"array":[[0,0]],"layer":0,"sign":1}]':new Layer()};
     this.upgradesBought = [];
     for (let i in config.upgrades) this.upgradesBought[i] = D(0);
     
