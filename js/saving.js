@@ -1,5 +1,5 @@
 // Nyan's Stuff
-
+onPresLoad=()=>{
 function newGame() {
   clearAll()
   game = new Game()
@@ -81,4 +81,4 @@ function getMinimalGameObj() {
 function wipe() {
   newGame();
   nyanSave();
-}
+}}
