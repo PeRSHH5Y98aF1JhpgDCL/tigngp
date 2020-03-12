@@ -306,7 +306,7 @@ class Dimension extends hasCache {
 		 temp=temp.pow(D(1.2).pow(game.upgradesBought["dimColl"]))
 	 }
 	 if (this.mult.gte(1)) {
-		 temp=temp.pow(1.3)
+		 temp=temp.pow(1.1)
 	 }
     return temp
   }
