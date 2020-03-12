@@ -364,7 +364,7 @@ window.Dimension=class Dimension extends hasCache {
 	  	if (game.upgrades.dimSale) {
 	    	teemp=game.upgrades.dimSale.level
 	    } else {teemp=D(0)}
-      temp=temp.pow(D(0.8).pow(teemp))
+      temp=temp.pow(D(0.9).pow(teemp))
 	return temp
   }
 	get realcost() {
