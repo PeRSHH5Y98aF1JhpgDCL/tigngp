@@ -4,7 +4,7 @@ class Game {
     this.sbe = false;
     this.tab = 0;
     
-    this.prestige = {};
+    this.prestige = {jea([0]):new Layer()};
     this.upgradesBought = [];
     for (let i in config.upgrades) this.upgradesBought[i] = D(0);
     
