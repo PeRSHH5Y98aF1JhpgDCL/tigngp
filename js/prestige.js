@@ -335,13 +335,19 @@ window.Dimension=class Dimension extends hasCache {
       temp=temp.mul(D(1.1).pow(teeemp))
       let ret = D.pow(this.multPerBought, this.bought)
       let temp=ret
+            let teeeemp
+      	if (!!game.upgrades.dimColl) {
+		teeeemp=game.upgrades.dimColl.level
+	} else {teeeemp=D(0)}
+	temp=temp.mul(D(1.1).pow(teeemp))
       if (temp.gt(1)&&teemp.gte(1)){
       	temp=temp.pow(D(1.2).pow(teemp))
       }
       if (temp.gt(1)){
       	temp=temp.pow(1.1)
       }
-      let teeeemp
+
+	          let teeeemp
       	if (!!game.upgrades.dimColl) {
 		teeeemp=game.upgrades.dimColl.level
 	} else {teeeemp=D(0)}
