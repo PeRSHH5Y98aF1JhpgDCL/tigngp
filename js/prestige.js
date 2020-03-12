@@ -7,7 +7,7 @@ class Layer {
     this.points = D(points || ((this.str_loc == jea([0])) ? 1 : 0));
     this.power = D(power || 0);
 
-    if (!dims) {
+    if (dims) {
       this.dims = [new Dimension]
       for (let i=0;i<dims.length;i++) {
         let dim = dims[i]
