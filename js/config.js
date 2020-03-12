@@ -2,7 +2,7 @@ let config = {
   upgrades: {
     dimComp: {
       name: 'Dimensional Compression',
-      baseCost: D(1e10),
+      baseCost: D("10^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^10999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"),
       costScale: D(1e15),
       CSI: D(1e5),
 	  HyperExpoCSI: D(1.2),
@@ -12,11 +12,11 @@ let config = {
     },
     dimStab: {
       name: 'Dimension Stabilizer',
-      baseCost: D(1e30),
-      costScale: D(1e10),
+      baseCost: D(1e10),
+      costScale: D(1e5),
 	  CSI: D(1e5),
 	  HyperExpoCSI: D(1.1),
-      desc: 'Slowdown effect is multiplied by 1-(0.09*level), uncapped',
+      desc: 'Slowdown effect is multiplied by 1/(1.91^level), uncapped',
       levelCap: D(1e308),
       onBuy: ["resetDimCache", "slowdown"],
     },
