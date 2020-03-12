@@ -381,7 +381,7 @@
     this.array=y.array
     this.sign=y.sign
     this.layer=y.layer
-  }
+  };//help
   Q.minus=Q.sub=function (x,y){
     return new ExpantaNum(x).sub(y);
   };
