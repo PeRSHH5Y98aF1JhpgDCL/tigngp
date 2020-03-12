@@ -25,7 +25,7 @@ let config = {
 	  HyperExpoCSI: D(1.5),
       desc: 'Dimension powers are raised to the power of 1.2 but only if greater than 1 for each upgrade, also wipes other upgrades, uncapped.',
       levelCap: D(1e308),
-      onBuy: [()=>{game.upgrades.tickspeed.level.array=[[0,0]];game.upgrades.dimStab.level.array=[[0,0]];},"resetLayer",'[{"array":[[0,0]],"layer":0,"sign":1}]']
+      onBuy: [()=>{game.upgrades.tickspeed.level.array=[[0,0]];game.upgrades.dimStab.level.array=[[0,0]];game.upgrades.dimSale.level.array=[[0,0]]},"resetLayer",'[{"array":[[0,0]],"layer":0,"sign":1}]']
     },
 	  tickspeed:{
 	  	baseCost:D(1e3),
