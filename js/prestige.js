@@ -36,7 +36,7 @@ window.Layer=class {
   
   update(diff) {
     this.tslp += diff;
-    this.state = game.upgradesBought.dimColl.gte(1);
+    this.state = false
     let sec = diff / 1000
     this.domUpdate()
     
@@ -325,7 +325,7 @@ window.Dimension=class Dimension extends hasCache {
 	    if (!game.upgradesBought["dimColl"]) {
 	    	teemp=D(0)
 	    } else {
-	    teemp=game.upgradesBought["dimColl"]
+	    teemp=game.upgradesBought.dimColl
 	    }
       let ret = D.pow(this.multPerBought, this.bought)
       let temp=ret
