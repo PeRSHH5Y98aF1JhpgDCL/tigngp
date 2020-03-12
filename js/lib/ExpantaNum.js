@@ -406,7 +406,7 @@
     this.array=y.array
     this.sign=y.sign
     this.layer=y.layer
-  }
+  };//help
   Q.times=Q.mul=function (x,y){
     return new ExpantaNum(x).mul(y);
   };
