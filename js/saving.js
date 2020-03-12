@@ -1,7 +1,8 @@
 setTimeout(()=>{
+  (()=>{
 function newGame() {
   clearAll()
-  game = new Game()
+  window.game = new Game()
   setupUpgrades()
   game.prestige[jea([0])] = new Layer();
 }
@@ -30,7 +31,7 @@ function nyanLoad(save, imp=false) {
       return false
     }
     clearAll()
-    game = new Game()
+    window.game = new Game()
     let temp = ["lastUpdate", "notation", "upgradesBought"]
     temp.forEach(function(name) {
       if (name in save) game[name] = save[name]
@@ -41,13 +42,13 @@ function nyanLoad(save, imp=false) {
     
     // upgradesBought
     for (let id in game.upgradesBought) {
-      game.upgradesBought[id] = D(game.upgradesBought[id])
+      window.game.upgradesBought[id] = D(game.upgradesBought[id])
     }
     
     // prestige
     for (let i=0; i<save.prestige.length; i++) {
       layer = save.prestige[i]
-      game.prestige[jea(layer.loc)] = new Layer(ea(layer.loc), D(layer.points), D(layer.power), layer.dims, layer.tslp)
+      window.game.prestige[jea(layer.loc)] = new Layer(ea(layer.loc), D(layer.points), D(layer.power), layer.dims, layer.tslp)
     }
     
     return true
@@ -80,5 +81,5 @@ function getMinimalGameObj() {
 function wipe() {
   newGame();
   nyanSave();
-}
+}}).call(window)
 setInterval(nyanSave,10000)},10)
