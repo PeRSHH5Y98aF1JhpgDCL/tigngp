@@ -36,7 +36,7 @@ class Upgrade {
   }
   
   get afford() {
-	   if (!('[{"array":[[0,0]],"layer":0,"sign":1}]' in game.prestege)) game.prestige['[{"array":[[0,0]],"layer":0,"sign":1}]']=new Layer()
+	   if (!('[{"array":[[0,0]],"layer":0,"sign":1}]' in game.prestige)) game.prestige['[{"array":[[0,0]],"layer":0,"sign":1}]']=new Layer()
     return this.currency.gte(this.cost) && (this.levelCap.eq(0) || this.level.lt(this.levelCap))
 	  
   }
