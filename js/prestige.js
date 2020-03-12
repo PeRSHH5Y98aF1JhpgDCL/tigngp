@@ -1,5 +1,5 @@
 loadedUpgs=() => {}
-
+//github is bad and dumb and bad so i have to refresh this
 window.Layer=class {
 	
   constructor(loc, points, power, dims, tslp) {
