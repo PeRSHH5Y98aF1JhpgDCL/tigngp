@@ -335,6 +335,9 @@ window.Dimension=class Dimension extends hasCache {
       if (ret.gt(1)){
       	temp=temp.pow(1.1)
       }
+	if (!game.upgrades.tickSpeed.level) {
+		game.upgrades.tickspeed={levle:D(0)}
+	}
       temp.mul(D(1.1).pow(game.upgrades.tickSpeed.level))
       return ret
     })
