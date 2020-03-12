@@ -1,5 +1,4 @@
 loadedUpgs=() => {}
-
 window.Layer=class {
 	
   constructor(loc, points, power, dims, tslp) {
