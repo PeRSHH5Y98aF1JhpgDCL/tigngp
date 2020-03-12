@@ -7,6 +7,7 @@ window.Layer=class {
 
     this.points = D(points || ((this.str_loc == jea([0])) ? 1 : 0));
     this.power = D(power || 0);
+	  
 
     if (dims) {
       this.dims = []
