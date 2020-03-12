@@ -341,7 +341,7 @@ window.Dimension=class Dimension extends hasCache {
 	} else {teeemp=game.upgrades.tickSpeed}
 	    
       temp.mul(D(1.1).pow(teeemp))
-      return ret
+      return temp
     })
   }
   
