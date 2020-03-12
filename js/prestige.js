@@ -269,7 +269,7 @@ class Dimension extends hasCache {
     return this.callCache("slowdown", function() {
       let powBase = D.max(D(2), this.dim.minus(1))
       let ret = D.pow(powBase, this.dim.plus(1))
-      ret = ret.times(D(1).sub(game.upgradesBought["dimStab"].times(0.09)))
+      ret = ret.times(D(1).div(game.upgradesBought["dimStab"].pow(1.09)))
       return ret
     })
   }
