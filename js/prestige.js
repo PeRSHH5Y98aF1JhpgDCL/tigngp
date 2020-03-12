@@ -307,13 +307,7 @@ class Dimension extends hasCache {
   }
   
   get perSec() {
-	 let temp=this.applySlowdown(this.amount.times(this.mult)).mul(D(1.1).pow(game.upgrades.tickSpeed.level))
-	 if (this.mult.gte(1)&&game.upgradesBought["dimColl"].gte(1)) {
-		 temp=temp.pow(D(1.2).pow(game.upgradesBought["dimColl"]))
-	 }
-	 if (this.mult.gte(1)) {
-		 temp=temp.pow(1.1)
-	 }
+    let temp=this.applySlowdown(this.amount.times(this.mult))
     return temp
   }
   
@@ -327,6 +321,14 @@ class Dimension extends hasCache {
     return this.callCache("mult", function() {
       let ret = D.pow(this.multPerBought, this.bought)
       if (game.upgradesBought.dimColl.eq(1) && ret.gt(1)) ret = D.pow(ret, 2)
+      let temp=ret
+      if (ret.gt(1)&&game.upgradesBought["dimColl"].gte(1)){
+      	temp=temp.pow(D(1.2).pow(game.upgradesBought["dimColl"]))
+      }
+      if (ret.gt(1)){
+      	temp=temp.pow(1.1)
+      }
+      temp.mul(D(1.1).pow(game.upgrades.tickSpeed.level))
       return ret
     })
   }
