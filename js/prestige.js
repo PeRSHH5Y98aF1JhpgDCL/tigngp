@@ -339,7 +339,7 @@ window.Dimension=class Dimension extends hasCache {
 	if (!!game.upgrades.tickSpeed) {
 		teeemp=game.upgrades.tickSpeed.level
 	} else {teeemp=D(0)}
-	    console.log(teeemp.toNumber())
+	    console.log(!!game.upgrades.tickSpeed)
       temp=temp.mul(D(1.1).pow(teeemp))
       return temp
     })
