@@ -401,6 +401,12 @@
     if (n<=MAX_SAFE_INTEGER) return new ExpantaNum(n);
     return ExpantaNum.pow(10,x.log10().add(other.log10()));
   };
+  P.timesBy=function (x) {
+    let y=this.mul(x)
+    this.array=y.array
+    this.sign=y.sign
+    this.layer=y.layer
+  }
   Q.times=Q.mul=function (x,y){
     return new ExpantaNum(x).mul(y);
   };
@@ -424,6 +430,12 @@
     if (pw.sub(fp).lt(new ExpantaNum(1e-9))) return fp;
     return pw;
   };
+  P.divideBy=function (x) {
+    let y=this.div(x)
+    this.array=y.array
+    this.sign=y.sign
+    this.layer=y.layer
+  }
   Q.divide=Q.div=function (x,y){
     return new ExpantaNum(x).div(y);
   };
