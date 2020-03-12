@@ -394,6 +394,6 @@ window.Dimension=class Dimension extends hasCache {
   }
 }
 // Empty line inserted to make mobile coding easier
-})
+}
 
 
