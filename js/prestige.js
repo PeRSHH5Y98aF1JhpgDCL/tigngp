@@ -41,6 +41,7 @@ class Layer {
       document.getElementById('g' + this.id).removeChild(document.getElementById('d' + this.dims[1].id));
       this.dims.splice(1, 1);
     }
+	  
     
     let dim;
     for (let i = 0; i < this.dims.length; i++) {
