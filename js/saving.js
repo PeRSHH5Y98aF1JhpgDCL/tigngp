@@ -11,6 +11,11 @@ window.nyanSave=function() {
   localStorage.setItem('tigsave', getFinalSaveString())
 }
 
+    
+    window.loadCheck=function(){
+    if (!game.time) {game.time=D(0)}
+    }
+    
 window.nyanLoad=function(save, imp=false) {
   save = (save || localStorage.getItem("tigsave"))
   if (typeof save == "string") {
@@ -50,7 +55,8 @@ window.nyanLoad=function(save, imp=false) {
       layer = save.prestige[i]
       window.game.prestige[jea(layer.loc)] = new Layer(ea(layer.loc), D(layer.points), D(layer.power), layer.dims, layer.tslp)
     }
-    
+    loadCheck()
+    game.time=game.time.add(new Date().getTime()-game.lastUpdate)
     return true
   }
   return false
