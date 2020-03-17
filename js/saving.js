@@ -56,6 +56,7 @@ window.nyanLoad=function(save, imp=false) {
       window.game.prestige[jea(layer.loc)] = new Layer(ea(layer.loc), D(layer.points), D(layer.power), layer.dims, layer.tslp)
     }
     loadCheck()
+    game.time=D(game.time)
     game.time=game.time.add(new Date().getTime()-game.lastUpdate)
     return true
   }
