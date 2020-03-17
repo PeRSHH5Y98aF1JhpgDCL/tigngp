@@ -17,7 +17,7 @@ function gameLoop(diff) {
   diff = (diff || Math.min(thisUpdate - game.lastUpdate, 21600000)) * diffMultiplier
   //if (diffMultiplier > 1) console.log("SHAME")
   //else if (diffMultiplier < 1) console.log("SLOWMOTION")
-
+window['t'].innerHTML=game.time.toNumber()
   for (let i in game.prestige) game.prestige[i].update(diff);
   updateDisplay()
   game.lastUpdate = thisUpdate;
