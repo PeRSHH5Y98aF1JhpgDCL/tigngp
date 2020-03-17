@@ -1,5 +1,9 @@
 
 let elmCounter = 0
+function timeBurst() {
+game.prestige[jea([0])].update(game.time.toNumber());
+     game.time=D(0)
+}
 function getFreeId() {
   if (elmCounter > ExpandtaNum.MSI) throw "Ran out of ids! Please tell the dev & refresh"
   return ++elmCounter;
