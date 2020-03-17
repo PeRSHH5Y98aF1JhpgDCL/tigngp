@@ -78,7 +78,7 @@ window.getMinimalGameObj=function() {
     notation: game.notation,
     upgradesBought: {},
     prestige: Object.values(game.prestige).map(x => x.objectify()),
-    time:time.toString()
+    time:game.time.toString()
   }
   for (let id in game.upgradesBought) {
     ret.upgradesBought[id] = game.upgradesBought[id].toString()
